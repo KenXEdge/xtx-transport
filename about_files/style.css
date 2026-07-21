@@ -8,9 +8,9 @@
 
 /* --- CSS Variables --- */
 :root {
-  --primary: #E8A020;
-  --primary-dark: #C8861A;
-  --primary-light: #FFC04D;
+  --primary: #6FA3DD;
+  --primary-dark: #325F94;
+  --primary-light: #8FBBE8;
   --dark: #0A0D12;
   --dark-2: #111520;
   --dark-3: #181D2A;
@@ -20,7 +20,7 @@
   --white: #FFFFFF;
   --off-white: #F4F6FA;
   --border: rgba(255,255,255,0.08);
-  --gradient-primary: linear-gradient(135deg, #E8A020 0%, #C8861A 100%);
+  --gradient-primary: linear-gradient(135deg, #6FA3DD 0%, #325F94 100%);
   --gradient-dark: linear-gradient(135deg, #0A0D12 0%, #1E2435 100%);
   --shadow-gold: 0 0 30px rgba(232, 160, 32, 0.25);
   --shadow-card: 0 8px 40px rgba(0,0,0,0.35);
@@ -1434,3 +1434,27 @@ footer {
 .page-carriers .nav-carriers,
 .page-drivers .nav-drivers,
 .page-contact .nav-contact { color: var(--primary) !important; }
+
+
+
+
+
+
+.nav-brand, .footer-brand { display: inline-flex !important; align-items: flex-end !important; flex-wrap: nowrap !important; font-size: 0 !important; line-height: 0 !important; text-decoration: none !important; position: static !important; width: auto !important; height: auto !important; }
+.nav-brand span, .footer-brand span, .nav-brand .brandtext, .footer-brand .brandtext { display: none !important; }
+.nav-brand::before, .footer-brand::before {
+  content: '' !important; display: block !important; flex-shrink: 0 !important; position: static !important;
+  filter: none !important; clip-path: none !important;
+  width: 87px !important; height: 80px !important; margin-right: 14px !important;
+  background: url('../assets/xtx-x.png') no-repeat center center !important;
+  background-size: contain !important;
+}
+.nav-brand::after, .footer-brand::after {
+  content: '' !important; display: block !important; flex-shrink: 1 !important; position: static !important;
+  filter: none !important; clip-path: none !important;
+  width: 275px !important; height: 12px !important; max-width: 40vw !important; margin-bottom: 6px !important;
+  background: url('../assets/xtx-word.png') no-repeat left center !important;
+  background-size: contain !important;
+}
+.footer-brand::before { width: 76px !important; height: 70px !important; margin-right: 12px !important; }
+.footer-brand::after { width: 240px !important; height: 10px !important; margin-bottom: 5px !important; }
