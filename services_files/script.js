@@ -474,3 +474,23 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     });
   }, { passive: true });
 })();
+
+(function(){
+  var pages=['index.html','about.html','services.html','safety.html','shippers.html','carriers.html','contact.html'];
+  var labels=['Home','About','Services','Safety','Shippers','Carriers','Contact'];
+  var f=window.location.pathname.split('/').pop();
+  if(!f||f==='')f='index.html';
+  var i=pages.indexOf(f);
+  if(i<0)return;
+  function mk(href,dir,label){
+    var a=document.createElement('a');
+    a.className='pageturn pageturn-'+dir;
+    a.href=href;
+    a.title=label;
+    a.setAttribute('aria-label',label);
+    a.innerHTML='<i class="fas fa-chevron-'+(dir==='prev'?'left':'right')+'"></i>';
+    document.body.appendChild(a);
+  }
+  if(i>0)mk(pages[i-1],'prev',labels[i-1]);
+  if(i<pages.length-1)mk(pages[i+1],'next',labels[i+1]);
+})();
